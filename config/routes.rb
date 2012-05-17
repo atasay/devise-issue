@@ -1,8 +1,7 @@
 Cmondevise::Application.routes.draw do
   get "home/index"
 
-  devise_for :users, :controllers => { :sessions => "dammit" }
-  #devise_for :users, :controllers => {:registrations => "DammitController"}
+  devise_for :users, :controllers => { :sessions => "error_reproducer" }
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

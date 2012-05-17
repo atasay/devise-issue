@@ -1,6 +1,6 @@
 require "minitest_helper"
 
-class HomeControllerTest < MiniTest::Rails::Controller
+class ErrorReproducerControllerTest < MiniTest::Rails::Controller
 
   include Devise::TestHelpers
 
@@ -10,7 +10,7 @@ class HomeControllerTest < MiniTest::Rails::Controller
 
     request.env["devise.mapping"] = Devise.mappings[:user]
 
-    get :index
+    post :create  # <------------   This is where the error occurs
     assert_response :success
   end
 end
